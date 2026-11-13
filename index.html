@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelomi Suzan Nebu — A Curious Mind</title>
+  <meta name="description" content="Personal portfolio of Shelomi Suzan Nebu — BBA student in Digital Marketing & E-commerce at Asian School of Business. Exploring design, creativity, and business.">
+  <meta name="author" content="Shelomi Suzan Nebu">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shelomi Suzan Nebu — A Curious Mind">
+  <meta property="og:description" content="A curious mind exploring creativity, business, design and everything in between.">
+
+  <!-- Google Fonts: Fraunces (Editorial Display Serif) + Plus Jakarta Sans (Warm UI Sans) + Space Mono (Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-motion="normal">
+
+  <!-- Celestial Cursor Trail Canvas -->
+  <canvas id="cursorCanvas" class="cursor-canvas" aria-hidden="true"></canvas>
+
+  <!-- Orbiting Guide Star (Scroll Companion) -->
+  <div class="orbit-star-track" aria-hidden="true">
+    <div class="orbit-star" id="orbitStar">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <path d="M12 0L14.2 9.8L24 12L14.2 14.2L12 24L9.8 14.2L0 12L9.8 9.8L12 0Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== FIXED AMBIENT HEADER ===== -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand" aria-label="Shelomi Suzan Nebu — Home">
+        <span class="brand-spark" aria-hidden="true">✦</span>
+        <span class="brand-text">Shelomi Suzan Nebu</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#story" class="nav-link">About &amp; Story</a></li>
+          <li><a href="#work" class="nav-link">Creative Work</a></li>
+          <li><a href="#learning" class="nav-link">Learning</a></li>
+          <li><a href="#outside" class="nav-link">Outside the Screen</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-utilities">
+        <!-- Motion Toggle -->
+        <button id="motionToggle" class="pill-btn utility-btn" aria-label="Toggle motion effects" aria-pressed="false" title="Reduce or pause motion">
+          <span class="icon-pause" aria-hidden="true">❚❚</span>
+          <span class="motion-btn-text">Pause motion</span>
+        </button>
+
+        <a href="mailto:nebushelomi@gmail.com" class="pill-btn contact-btn">
+          <span>Say Hello</span>
+          <span class="star-mini" aria-hidden="true">✦</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <span class="drawer-title">Shelomi</span>
+      <button id="drawerCloseBtn" class="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link">Home</a></li>
+      <li><a href="#story" class="drawer-link">Story &amp; Background</a></li>
+      <li><a href="#work" class="drawer-link">Creative Work (Umami House)</a></li>
+      <li><a href="#learning" class="drawer-link">Tools &amp; IBM Courses</a></li>
+      <li><a href="#outside" class="drawer-link">Outside the Screen</a></li>
+      <li><a href="#journey" class="drawer-link">Education &amp; Contact</a></li>
+    </ul>
+    <div class="drawer-bottom">
+      <a href="mailto:nebushelomi@gmail.com" class="drawer-email">nebushelomi@gmail.com</a>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- ========================================================
+         LAYER 1: FULL-SCREEN COSMIC STAGE (100vh Opening)
+         ======================================================== -->
+    <section class="stage stage-hero" id="hero">
+      <div class="celestial-ambient-backdrop" aria-hidden="true">
+        <div class="cosmic-disc"></div>
+        <div class="star-sparkle star-1">✦</div>
+        <div class="star-sparkle star-2">✦</div>
+        <div class="star-sparkle star-3">✦</div>
+      </div>
+      
+      <div class="container hero-centerpiece">
+        <div class="hero-badge-pill">
+          <span class="sparkle" aria-hidden="true">✦</span>
+          <span>BBA &middot; Digital Marketing &amp; E-commerce &middot; Asian School of Business</span>
+        </div>
+
+        <div class="hero-typography">
+          <h1 class="hero-title">
+            <span class="hero-pretitle">Shelomi Suzan Nebu</span>
+            <span class="hero-headline" data-splitting>“A little curiosity goes a long way.”</span>
+          </h1>
+        </div>
+
+        <p class="hero-lead">
+          A curious mind exploring creativity, business, design and everything in between. Currently discovering how ideas, storytelling, and visual craft come together in an evolving digital world.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#story" class="btn btn-celestial">
+            <span>Discover My Story</span>
+            <span class="btn-star" aria-hidden="true">✦</span>
+          </a>
+          <a href="mailto:nebushelomi@gmail.com" class="hero-email-ghost">
+            <span>nebushelomi@gmail.com</span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="stage-scroll-prompt">
+          <a href="#story" class="scroll-cue">
+            <span class="cue-text">Scroll to enter next layer</span>
+            <span class="cue-arrow" aria-hidden="true">&darr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         LAYER 2: PINNED STORYTELLING CHAPTERS (Video 0:01 - 0:04)
+         Scroll-driven sticky layer narrative with chapters
+         ======================================================== -->
+    <section class="stage stage-story-pinned" id="story">
+      <div class="story-sticky-viewport">
+        
+        <!-- Pinned Header / Progress Indicators -->
+        <div class="story-nav-hud">
+          <div class="hud-left">
+            <span class="hud-spark" aria-hidden="true">✦</span>
+            <span class="hud-title">01 / A Little of My Story</span>
+          </div>
+          <div class="hud-progress-ticks" aria-label="Story chapter progression">
+            <span class="tick active" data-step="0">01 Origins</span>
+            <span class="tick-line"></span>
+            <span class="tick" data-step="1">02 Focus</span>
+            <span class="tick-line"></span>
+            <span class="tick" data-step="2">03 Mindset</span>
+          </div>
+        </div>
+
+        <!-- Chapter Slides (Cross-fading with scroll) -->
+        <div class="story-slides-track">
+          
+          <!-- Slide 1: The Origins -->
+          <article class="story-slide active" id="slide-0" data-slide="0">
+            <span class="slide-eyebrow">THE FOUNDATION &middot; COMMERCE &amp; ENTREPRENEURSHIP</span>
+            <h2 class="slide-heading">Human by curiosity.</h2>
+            <div class="slide-body">
+              <p>
+                My path began in Commerce with Entrepreneurship at St. Thomas Central School. It wasn't just about accounting or market economics — it sparked my fascination with how small ideas grow into living ventures, and why people choose what they choose.
+              </p>
+              <p class="slide-highlight">
+                "Understanding the human element behind every transaction became the compass for everything I wanted to learn."
+              </p>
+            </div>
+            <div class="slide-meta-row">
+              <span class="slide-tag">📍 Based in Thiruvananthapuram, Kerala</span>
+              <span class="slide-tag">Classes 11 &amp; 12 Commerce</span>
+            </div>
+          </article>
+
+          <!-- Slide 2: The Horizon -->
+          <article class="story-slide" id="slide-1" data-slide="1">
+            <span class="slide-eyebrow">THE PRESENT &middot; DIGITAL MARKETING &amp; E-COMMERCE</span>
+            <h2 class="slide-heading">Creativity meets commerce.</h2>
+            <div class="slide-body">
+              <p>
+                Today at Asian School of Business, I'm pursuing my BBA in Digital Marketing and E-commerce. I'm exploring how visual design, online consumer behavior, and modern web platforms work together to build brands people genuinely care about.
+              </p>
+              <p class="slide-highlight">
+                "I enjoy being at the intersection of business strategy and visual expression — connecting the logical with the creative."
+              </p>
+            </div>
+            <div class="slide-meta-row">
+              <span class="slide-tag">Asian School of Business</span>
+              <span class="slide-tag">First-Semester BBA Cohort</span>
+            </div>
+          </article>
+
+          <!-- Slide 3: The Approach -->
+          <article class="story-slide" id="slide-2" data-slide="2">
+            <span class="slide-eyebrow">THE APPROACH &middot; OBSERVANT &amp; EXPLORATIVE</span>
+            <h2 class="slide-heading">Noticing the quiet details.</h2>
+            <div class="slide-body">
+              <p>
+                Whether experimenting with layouts in Canva, building simple webpages in VS Code, or completing online courses in data and design thinking, I do my best work when I take the time to listen, observe patterns, and learn through direct experience.
+              </p>
+              <p class="slide-highlight">
+                "There is always something new to understand, and I like giving my interests the time and patience they deserve."
+              </p>
+            </div>
+            <div class="slide-meta-row">
+              <span class="slide-tag">✦ Observant</span>
+              <span class="slide-tag">✦ Creative</span>
+              <span class="slide-tag">✦ Explorative</span>
+              <span class="slide-tag">✦ Growth-Minded</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sticky Stage Bottom Prompt -->
+        <div class="story-bottom-hud">
+          <span class="hud-note">Keep scrolling to enter the creative studio &darr;</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         LAYER 3: THE WARM IVORY GALLERY CURTAIN (Video 0:05!)
+         The background transitions from dark cosmos into warm paper
+         ======================================================== -->
+    <div class="curtain-stage" id="about">
+
+      <!-- ===== CHAPTER 3: A CREATIVE LITTLE CORNER (Umami House) ===== -->
+      <section class="section work-section" id="work">
+        <div class="container">
+          
+          <div class="section-marker">
+            <span class="marker-star" aria-hidden="true">✦</span>
+            <span class="marker-text">02 / A Creative Little Corner</span>
+          </div>
+
+          <div class="work-header">
+            <div class="work-header-content">
+              <span class="project-pill">Featured Coursework &middot; Visual Branding</span>
+              <h2 class="work-title">Umami House &mdash; House of Flavours</h2>
+              <p class="work-intro">
+                From visual branding and promotional posters to product layouts, Canva is one of my favourite creative spaces to experiment with typography, color, and storytelling. This collection is a visual-branding coursework project created in Canva for a ramen restaurant concept.
+              </p>
+            </div>
+            <div class="work-header-meta">
+              <div class="meta-block">
+                <span class="meta-label">Project</span>
+                <span class="meta-value">Umami House &mdash; House of Flavours</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Category</span>
+                <span class="meta-value">Visual Branding &middot; Coursework</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Primary Tool</span>
+                <span class="meta-value">Canva</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Asymmetric Gallery (Preserving Original Proportions) -->
+          <div class="gallery-mosaic">
+            
+            <!-- Piece 1: Illustrated Bowl Polaroid (Hero piece) -->
+            <article class="gallery-item item-hero" data-index="0">
+              <button class="gallery-trigger" aria-label="Open full-size image: Illustrated Ramen Bowl poster">
+                <div class="artwork-frame">
+                  <img src="assets/umami-house-polaroid.jpg" alt="Umami House visual branding poster featuring an illustrated ramen bowl with chopsticks, soft gradient backdrop, and social links" loading="lazy">
+                  <div class="frame-overlay">
+                    <span class="inspect-cue">View full size <span aria-hidden="true">↗</span></span>
+                  </div>
+                </div>
+                <div class="item-caption">
+                  <span class="item-number">01</span>
+                  <div>
+                    <h3 class="item-title">Brand Identity &amp; Illustrated Bowl</h3>
+                    <p class="item-desc">Concept poster pairing warm retro grid accents, hand-drawn food artwork, and brand typography.</p>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- Piece 2: Craving Ramen Delivery -->
+            <article class="gallery-item item-delivery" data-index="1">
+              <button class="gallery-trigger" aria-label="Open full-size image: Craving Ramen delivery promotional poster">
+                <div class="artwork-frame">
+                  <img src="assets/umami-house-delivery.jpg" alt="Umami House promotional poster on dark background reading: Craving Ramen? We Deliver. Fresh, Fast, Flavourful" loading="lazy">
+                  <div class="frame-overlay">
+                    <span class="inspect-cue">View full size <span aria-hidden="true">↗</span></span>
+                  </div>
+                </div>
+                <div class="item-caption">
+                  <span class="item-number">02</span>
+                  <div>
+                    <h3 class="item-title">Delivery &amp; Takeaway Promotion</h3>
+                    <p class="item-desc">High-contrast promotional poster exploring bold headline layout and food photography presentation.</p>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- Piece 3: One Bite Away Red Grid -->
+            <article class="gallery-item item-one-bite" data-index="2">
+              <button class="gallery-trigger" aria-label="Open full-size image: One Bite Away poster">
+                <div class="artwork-frame">
+                  <img src="assets/umami-house-one-bite.jpg" alt="Umami House poster with bold red grid and headline: Good food should do more than just taste good — One Bite Away" loading="lazy">
+                  <div class="frame-overlay">
+                    <span class="inspect-cue">View full size <span aria-hidden="true">↗</span></span>
+                  </div>
+                </div>
+                <div class="item-caption">
+                  <span class="item-number">03</span>
+                  <div>
+                    <h3 class="item-title">“One Bite Away” Campaign Poster</h3>
+                    <p class="item-desc">Vibrant red grid poster with stylized steam illustration and layered typographic hierarchy.</p>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- Piece 4: 50% Off Discount Layout -->
+            <article class="gallery-item item-discount" data-index="3">
+              <button class="gallery-trigger" aria-label="Open full-size image: 50 percent off discount promotion poster">
+                <div class="artwork-frame">
+                  <img src="assets/umami-house-discount.jpg" alt="Umami House 50 percent off promotional design with red, yellow, and pixelated Ramen typography" loading="lazy">
+                  <div class="frame-overlay">
+                    <span class="inspect-cue">View full size <span aria-hidden="true">↗</span></span>
+                  </div>
+                </div>
+                <div class="item-caption">
+                  <span class="item-number">04</span>
+                  <div>
+                    <h3 class="item-title">Promotional Offer &amp; Pixel Typography</h3>
+                    <p class="item-desc">Bold split-palette layout experimenting with playful circular stickers and retro pixel lettering.</p>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- Piece 5: Pinned Review Note -->
+            <article class="gallery-item item-review" data-index="4">
+              <button class="gallery-trigger" aria-label="Open full-size image: Review note visual branding design">
+                <div class="artwork-frame">
+                  <img src="assets/umami-house-review.jpg" alt="Coursework design layout featuring a pinned customer review note over a repeated crimson hashtag background" loading="lazy">
+                  <div class="frame-overlay">
+                    <span class="inspect-cue">View full size <span aria-hidden="true">↗</span></span>
+                  </div>
+                </div>
+                <div class="item-caption">
+                  <span class="item-number">05</span>
+                  <div>
+                    <h3 class="item-title">Review Social Layout &middot; Sample Copy</h3>
+                    <p class="item-desc">Sample coursework design exploring tactile social proof presentation with a pinned card mockup.</p>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 4: THINGS I'M EXPLORING ===== -->
+      <section class="section learning-section" id="learning">
+        <div class="container">
+          
+          <div class="section-marker">
+            <span class="marker-star" aria-hidden="true">✦</span>
+            <span class="marker-text">03 / Things I'm Exploring</span>
+          </div>
+
+          <div class="learning-intro">
+            <h2 class="section-title">Tools, curiosity, and continuous study.</h2>
+            <p class="section-subtitle">
+              A quiet ledger of the tools I use regularly and the online coursework I have completed alongside college studies.
+            </p>
+          </div>
+
+          <!-- Three Collections: Creative, Digital, Business -->
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-header">
+                <span class="tool-num">01</span>
+                <h3 class="tool-title">Visual Design</h3>
+              </div>
+              <p class="tool-text">Exploring layouts, color palettes, typography, and visual communication.</p>
+              <ul class="tool-tags">
+                <li>Canva Design</li>
+                <li>Visual Branding</li>
+                <li>Poster Layouts</li>
+                <li>Creative Communication</li>
+              </ul>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-header">
+                <span class="tool-num">02</span>
+                <h3 class="tool-title">Web &amp; Digital Basics</h3>
+              </div>
+              <p class="tool-text">Curious about how websites are built, experimenting with the fundamentals.</p>
+              <ul class="tool-tags">
+                <li>HTML Basics</li>
+                <li>CSS Styling</li>
+                <li>VS Code</li>
+                <li>Simple Webpages</li>
+              </ul>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-header">
+                <span class="tool-num">03</span>
+                <h3 class="tool-title">Business &amp; Productivity</h3>
+              </div>
+              <p class="tool-text">Academic foundations in marketing, business management, and productivity tools.</p>
+              <ul class="tool-tags">
+                <li>Digital Marketing</li>
+                <li>E-commerce Studies</li>
+                <li>Microsoft Excel</li>
+                <li>Microsoft Word</li>
+                <li>College Seminars</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Completed IBM Online Courses -->
+          <div class="ibm-block">
+            <div class="ibm-header">
+              <div class="ibm-title-group">
+                <span class="ibm-badge">Completed Online Courses</span>
+                <h3 class="ibm-heading">IBM Learning Pathways</h3>
+              </div>
+              <p class="ibm-caption">Five independent courses completed to build foundational data and design thinking awareness.</p>
+            </div>
+
+            <div class="ibm-list">
+              <div class="ibm-item">
+                <span class="ibm-num">01</span>
+                <span class="ibm-name">Getting Started with Data</span>
+                <span class="ibm-provider">IBM Online</span>
+              </div>
+              <div class="ibm-item">
+                <span class="ibm-num">02</span>
+                <span class="ibm-name">Getting Started with Cybersecurity</span>
+                <span class="ibm-provider">IBM Online</span>
+              </div>
+              <div class="ibm-item">
+                <span class="ibm-num">03</span>
+                <span class="ibm-name">Data Fundamentals</span>
+                <span class="ibm-provider">IBM Online</span>
+              </div>
+              <div class="ibm-item">
+                <span class="ibm-num">04</span>
+                <span class="ibm-name">Enterprise Design Thinking Practitioner</span>
+                <span class="ibm-provider">IBM Online</span>
+              </div>
+              <div class="ibm-item">
+                <span class="ibm-num">05</span>
+                <span class="ibm-name">Data Literacy</span>
+                <span class="ibm-provider">IBM Online</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 5: OUTSIDE THE SCREEN ===== -->
+      <section class="section outside-section" id="outside">
+        <div class="container">
+          
+          <div class="section-marker">
+            <span class="marker-star" aria-hidden="true">✦</span>
+            <span class="marker-text">04 / Outside the Screen</span>
+          </div>
+
+          <div class="outside-header">
+            <h2 class="section-title">Beyond the classroom &amp; the canvas.</h2>
+            <p class="section-subtitle">
+              There's more to me than the things I study and design. These are the quiet ways I recharge, stay curious, and keep balanced.
+            </p>
+          </div>
+
+          <!-- Tactile Personal Note Cards (No generic stock photos) -->
+          <div class="interests-cards-grid">
+            <div class="interest-card tilt-left">
+              <span class="card-glyph" aria-hidden="true">📖</span>
+              <span class="interest-label">Reading</span>
+              <h3 class="interest-heading">Getting lost in a good book</h3>
+              <p class="interest-desc">Enjoying quiet afternoons with stories, ideas, and thoughtful writing that prompt fresh perspective.</p>
+            </div>
+
+            <div class="interest-card tilt-right">
+              <span class="card-glyph" aria-hidden="true">🎵</span>
+              <span class="interest-label">Music</span>
+              <h3 class="interest-heading">Pop &amp; rock playlists</h3>
+              <p class="interest-desc">Music is my daily backdrop &mdash; uplifting rhythms for creative focus and unwinding.</p>
+            </div>
+
+            <div class="interest-card tilt-left">
+              <span class="card-glyph" aria-hidden="true">🍳</span>
+              <span class="interest-label">In the Kitchen</span>
+              <h3 class="interest-heading">Trying new recipes</h3>
+              <p class="interest-desc">Cooking feels like design you can taste: experimenting with ingredients, presentation, and flavours.</p>
+            </div>
+
+            <div class="interest-card tilt-right">
+              <span class="card-glyph" aria-hidden="true">🏋️</span>
+              <span class="interest-label">Fitness</span>
+              <h3 class="interest-heading">Working out &amp; staying active</h3>
+              <p class="interest-desc">A disciplined habit that keeps my energy steady, clears mental fog, and builds daily resilience.</p>
+            </div>
+
+            <div class="interest-card span-two">
+              <span class="card-glyph" aria-hidden="true">⛰️</span>
+              <span class="interest-label">Outdoor Pursuits</span>
+              <h3 class="interest-heading">Hiking, trekking &amp; nature trails</h3>
+              <p class="interest-desc">When there's an opportunity to step into the outdoors, Kerala's hills and trails are always close to the top of my list.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 6: THE JOURNEY CONTINUES & CONTACT ===== -->
+      <section class="section journey-section" id="journey">
+        <div class="container">
+          
+          <div class="section-marker">
+            <span class="marker-star" aria-hidden="true">✦</span>
+            <span class="marker-text">05 / The Journey Continues</span>
+          </div>
+
+          <div class="journey-grid">
+            <!-- Education Chronicle -->
+            <div class="education-block">
+              <h2 class="journey-title">Educational Foundation</h2>
+              
+              <div class="edu-timeline">
+                <div class="edu-item current">
+                  <span class="edu-period">Present</span>
+                  <h3 class="edu-degree">Bachelor of Business Administration (BBA)</h3>
+                  <p class="edu-spec">Digital Marketing &amp; E-commerce</p>
+                  <p class="edu-place">Asian School of Business &middot; Thiruvananthapuram</p>
+                </div>
+
+                <div class="edu-item">
+                  <span class="edu-period">Classes 11 &amp; 12</span>
+                  <h3 class="edu-degree">Higher Secondary Education</h3>
+                  <p class="edu-spec">Commerce with Entrepreneurship</p>
+                  <p class="edu-place">St. Thomas Central School</p>
+                </div>
+
+                <div class="edu-item">
+                  <span class="edu-period">Schooling</span>
+                  <h3 class="edu-degree">Primary &amp; Secondary Education</h3>
+                  <p class="edu-place">St. Thomas Central School</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Closing & Direct Contact -->
+            <div class="closing-block">
+              <div class="closing-quote-card">
+                <span class="quote-spark" aria-hidden="true">✦</span>
+                <h2 class="closing-heading">Still learning. Always exploring.</h2>
+                <p class="closing-text">
+                  I'm at the very beginning of my journey, with plenty of ideas to discover, skills to develop, and experiences waiting ahead. And that's the part I'm most excited about.
+                </p>
+
+                <div class="contact-card">
+                  <span class="contact-label">Get in Touch</span>
+                  <p class="contact-sub">Have a question, feedback on my design coursework, or just want to say hello?</p>
+                  
+                  <div class="contact-action-row">
+                    <a href="mailto:nebushelomi@gmail.com" class="direct-email-btn">
+                      <span>nebushelomi@gmail.com</span>
+                      <span class="email-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                    <button id="copyEmailBtn" class="copy-pill-btn" data-email="nebushelomi@gmail.com" aria-label="Copy email address to clipboard">
+                      <span>Copy email</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div> <!-- End Curtain Stage -->
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-name">Shelomi Suzan Nebu</span>
+        <p class="footer-note">Designed with curiosity, care &amp; a little stardust.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-top-link">
+          <span>Back to beginning</span>
+          <span class="star-up" aria-hidden="true">✦</span>
+        </a>
+        <p class="copyright">&copy; 2026 Shelomi Suzan Nebu &middot; Thiruvananthapuram, Kerala</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CINEMATIC IMAGE LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Artwork detail viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close image viewer">&times;</button>
+      
+      <div class="lightbox-figure">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+
+      <div class="lightbox-info">
+        <span id="lightboxIndex" class="lightbox-counter">01 / 05</span>
+        <h3 id="lightboxTitle" class="lightbox-title">Title</h3>
+        <p id="lightboxDesc" class="lightbox-desc">Description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-bubble" role="status" aria-live="polite"></div>
+
+  <!-- GSAP 3 & ScrollTrigger for 120fps Cinematic Parallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Splitting.js for Character & Word Staggers -->
+  <script src="splitting.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
